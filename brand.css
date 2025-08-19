@@ -1,22 +1,15 @@
 /* assets/css/brand.css — orange & yellow theme */
 :root {
-  /* base */
   --bg: #0a0f14;
   --text: #e9edf1;
   --muted: #9aa7b2;
-
-  /* brand – orange & yellow */
-  --brand: #ff7a00;     /* primary orange */
-  --brand-2: #ffd166;   /* warm yellow accent */
-
-  /* surfaces / effects */
+  --brand: #ff7a00;
+  --brand-2: #ffd166;
   --surface: rgba(255,255,255,0.06);
   --glass: rgba(255,255,255,0.08);
   --ring: rgba(255,122,0,0.5);
   --shadow: 0 10px 30px rgba(255,122,0,0.12);
 }
-
-/* Light mode */
 :root[data-theme="light"] {
   --bg: #fffaf5;
   --text: #1b1f24;
@@ -26,42 +19,10 @@
   --ring: rgba(255,122,0,0.35);
   --shadow: 0 10px 30px rgba(255,122,0,0.10);
 }
-
-/* Buttons */
-.btn--primary {
-  background: var(--brand);
-  color: #0a0f14;
-  border: none;
-  box-shadow: var(--shadow);
-}
-.btn--primary:hover { filter: brightness(0.95); }
-
-/* Pills / badges / gradients */
-.pill, .badge {
-  background: linear-gradient(90deg, var(--brand), var(--brand-2));
-  color: #0a0f14;
-}
-.grad {
-  background: linear-gradient(90deg, var(--brand), var(--brand-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* Glass cards */
-.glass, .card, .price, .post {
-  background: var(--glass);
-  border: 1px solid rgba(255,209,102,0.15);
-  backdrop-filter: blur(8px);
-}
-
-/* Focus */
-:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
-
-/* Decorative background accents */
-.bg-orbs::before, .bg-orbs::after, .hero-stripes {
-  background: radial-gradient(60% 60% at 50% 50%,
-    rgba(255,122,0,0.15),
-    rgba(255,209,102,0.10) 40%,
-    transparent 70%);
-}
+.btn--primary { background: var(--brand); color:#0a0f14; border:none; box-shadow:var(--shadow); }
+.btn--primary:hover { filter:brightness(0.95); }
+.pill,.badge{ background:linear-gradient(90deg,var(--brand),var(--brand-2)); color:#0a0f14; }
+.grad{ background:linear-gradient(90deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.glass,.card,.price,.post{ background:var(--glass); border:1px solid rgba(255,209,102,0.15); backdrop-filter:blur(8px); }
+:focus-visible{ outline:2px solid var(--ring); outline-offset:3px; }
+.bg-orbs::before,.bg-orbs::after,.hero-stripes{ background:radial-gradient(60% 60% at 50% 50%, rgba(255,122,0,0.15), rgba(255,209,102,0.10) 40%, transparent 70%); }
