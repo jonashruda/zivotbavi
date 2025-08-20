@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="cs" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Život baví</title>
+  <link rel="stylesheet" href="/zivotbavi/styles.css">
+  <meta name="color-scheme" content="light dark">
+</head>
+<body>
+  <nav class="nav">
+    <div class="bar container">
+      <div class="logo"><span class="dot"></span> Život baví</div>
+      <div class="spacer"></div>
+      <a class="btn" href="/zivotbavi/blog/index.html">Blog</a><a class="btn" href="/zivotbavi/pages/o-nas/index.html">O&nbsp;nás</a><a class="btn" href="/zivotbavi/pages/kontakt/index.html">Kontakt</a>
+      <button class="btn" onclick="toggle()">🌓 Režim</button>
+    </div>
+  </nav>
+
+  <section class="container">
+    <div class="hero-card">
+      <div class="kicker">Blog</div>
+      <h1 class="display">Všechny články</h1>
+      <div class="search" style="margin-top:8px">
+        <input id="q" type="search" placeholder="Hledat články..." oninput="filterPosts()">
+        <span class="icon">🔎</span>
+      </div>
+    </div>
+    <div class="grid" style="margin-top:16px">
+
+    <article class="card" data-post-card data-title="Na psychopata s humorem" data-date="24.10.2024">
+      <a href="/zivotbavi/posts/na-psychopata-s-humorem/">
+        <img src="/zivotbavi/zivot-bavi-v-desti.png" alt="">
+        <div class="pad">
+          <div class="meta">24.10.2024</div>
+          <div class="title">Na psychopata s humorem</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Žatec" data-date="05.10.2023">
+      <a href="/zivotbavi/posts/zatec/">
+        <img src="/zivotbavi/zatec-unesco-1.png" alt="">
+        <div class="pad">
+          <div class="meta">05.10.2023</div>
+          <div class="title">Žatec</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Z polomrtvé sněženky matka &quot;MACHR&quot;" data-date="28.02.2022">
+      <a href="/zivotbavi/posts/z-polomrtve-snezenky-matka-machr/">
+        <img src="/zivotbavi/img-20220225-183104.jpg" alt="">
+        <div class="pad">
+          <div class="meta">28.02.2022</div>
+          <div class="title">Z polomrtvé sněženky matka &quot;MACHR&quot;</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="PF 2022" data-date="30.12.2021">
+      <a href="/zivotbavi/posts/pf-2022/">
+        <img src="/zivotbavi/pf-2022-ctverec.png" alt="">
+        <div class="pad">
+          <div class="meta">30.12.2021</div>
+          <div class="title">PF 2022</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Prázdniny v Neapoli?" data-date="07.11.2021">
+      <a href="/zivotbavi/posts/prazdniny-v-neapoli/">
+        <img src="/zivotbavi/img-20211031-134801-2.jpg" alt="">
+        <div class="pad">
+          <div class="meta">07.11.2021</div>
+          <div class="title">Prázdniny v Neapoli?</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Slušný nebo poslušný?" data-date="14.04.2021">
+      <a href="/zivotbavi/posts/slusny-nebo-poslusny/">
+        <img src="/zivotbavi/img-20180712-224834-resized-20180831-092353960.jpg" alt="">
+        <div class="pad">
+          <div class="meta">14.04.2021</div>
+          <div class="title">Slušný nebo poslušný?</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Příběh o strachu" data-date="20.03.2021">
+      <a href="/zivotbavi/posts/pribeh-o-strachu/">
+        <img src="/zivotbavi/img-20210320-172643.jpg" alt="">
+        <div class="pad">
+          <div class="meta">20.03.2021</div>
+          <div class="title">Příběh o strachu</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Bojovka, která baví :-)" data-date="09.02.2021">
+      <a href="/zivotbavi/posts/bojovka-ktera-bavi/">
+        <img src="/zivotbavi/img-20210131-135615-2.jpg" alt="">
+        <div class="pad">
+          <div class="meta">09.02.2021</div>
+          <div class="title">Bojovka, která baví :-)</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="PF 2021" data-date="03.01.2021">
+      <a href="/zivotbavi/posts/pf-2021/">
+        <img src="/zivotbavi/pf-2021.png" alt="">
+        <div class="pad">
+          <div class="meta">03.01.2021</div>
+          <div class="title">PF 2021</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Život baví v práci" data-date="18.11.2020">
+      <a href="/zivotbavi/posts/zivot-bavi-v-praci/">
+        <img src="/zivotbavi/inteligence-network-2.jpg" alt="">
+        <div class="pad">
+          <div class="meta">18.11.2020</div>
+          <div class="title">Život baví v práci</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Bilance cynická versus mateřská" data-date="10.09.2020">
+      <a href="/zivotbavi/posts/bilance-cynicka-versus-materska/">
+        <img src="/zivotbavi/img-20200910-223034-1.jpg" alt="">
+        <div class="pad">
+          <div class="meta">10.09.2020</div>
+          <div class="title">Bilance cynická versus mateřská</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Návrat ke kořenům nebo k nesvobodě?" data-date="22.04.2020">
+      <a href="/zivotbavi/posts/navrat-ke-korenum-nebo-k-nesvobode/">
+        <img src="/zivotbavi/navrat-2.png" alt="">
+        <div class="pad">
+          <div class="meta">22.04.2020</div>
+          <div class="title">Návrat ke kořenům nebo k nesvobodě?</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="5 tipů pro zdraví od &quot;Život baví&quot;" data-date="13.03.2020">
+      <a href="/zivotbavi/posts/5-tipu-pro-zdravi/">
+        <img src="/zivotbavi/snezenky-e1584097016456.jpg" alt="">
+        <div class="pad">
+          <div class="meta">13.03.2020</div>
+          <div class="title">5 tipů pro zdraví od &quot;Život baví&quot;</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Jak začít? Spolu!" data-date="28.01.2020">
+      <a href="/zivotbavi/posts/zacit-spolu/">
+        <img src="/zivotbavi/clipdealer-a22168278-preview.jpg" alt="">
+        <div class="pad">
+          <div class="meta">28.01.2020</div>
+          <div class="title">Jak začít? Spolu!</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Kdo jsem? Žena jako žádná jiná!" data-date="26.09.2019">
+      <a href="/zivotbavi/posts/zena-jako-zadna-jina/">
+        <img src="/zivotbavi/img-20190130-102830-resized-20190130-041956753-2.jpg" alt="">
+        <div class="pad">
+          <div class="meta">26.09.2019</div>
+          <div class="title">Kdo jsem? Žena jako žádná jiná!</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Kurz, terapie nebo workshop pro ženy?" data-date="02.02.2019">
+      <a href="/zivotbavi/posts/kurz-terapie-nebo-workshop-pro-zeny/">
+        <img src="/zivotbavi/heart-1976646.jpg" alt="">
+        <div class="pad">
+          <div class="meta">02.02.2019</div>
+          <div class="title">Kurz, terapie nebo workshop pro ženy?</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="PF 2019" data-date="27.12.2018">
+      <a href="/zivotbavi/posts/pf-2019/">
+        <img src="/zivotbavi/pf-2019-zivot-bavi.png" alt="">
+        <div class="pad">
+          <div class="meta">27.12.2018</div>
+          <div class="title">PF 2019</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Tip na nezapomenutelný dárek..." data-date="15.12.2018">
+      <a href="/zivotbavi/posts/tip-na-nezapomenutelny-darek/">
+        <img src="/zivotbavi/darkovy-poukaz.png" alt="">
+        <div class="pad">
+          <div class="meta">15.12.2018</div>
+          <div class="title">Tip na nezapomenutelný dárek...</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Můžeme ovlivnit inteligenci našich dětí?" data-date="17.11.2018">
+      <a href="/zivotbavi/posts/muzeme-ovlivnit-inteligenci-nasich-deti/">
+        <img src="/zivotbavi/brain-2750453-1280-e1533831034711.png" alt="">
+        <div class="pad">
+          <div class="meta">17.11.2018</div>
+          <div class="title">Můžeme ovlivnit inteligenci našich dětí?</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Feedback" data-date="10.11.2018">
+      <a href="/zivotbavi/posts/feedback/">
+        <img src="/zivotbavi/reference.jpg" alt="">
+        <div class="pad">
+          <div class="meta">10.11.2018</div>
+          <div class="title">Feedback</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Prázdninové postřehy poučené matky" data-date="01.09.2018">
+      <a href="/zivotbavi/posts/prazdninove-postrehy-poucene-matky/">
+        <img src="/zivotbavi/zapisky-z-prazdnin.png" alt="">
+        <div class="pad">
+          <div class="meta">01.09.2018</div>
+          <div class="title">Prázdninové postřehy poučené matky</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Zážitek nemusí být dobrý. Hlavně že je silný..." data-date="10.07.2018">
+      <a href="/zivotbavi/posts/zazitek-nemusi-byt-dobry/">
+        <img src="/zivotbavi/silny-zazitek-e1531254264864.jpg" alt="">
+        <div class="pad">
+          <div class="meta">10.07.2018</div>
+          <div class="title">Zážitek nemusí být dobrý. Hlavně že je silný...</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Jedeme na (rodinný) výlet?" data-date="24.06.2018">
+      <a href="/zivotbavi/posts/jedeme-na-rodinny-vylet/">
+        <img src="/zivotbavi/img-20180622-101316-resized-20180624-070349801-e1531250941416.jpg" alt="">
+        <div class="pad">
+          <div class="meta">24.06.2018</div>
+          <div class="title">Jedeme na (rodinný) výlet?</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Co dělat v máji? Mějte se rádi!" data-date="09.05.2018">
+      <a href="/zivotbavi/posts/co-delat-v-maji-mejte-se-radi/">
+        <img src="/zivotbavi/31437517-1808650092534664-6062787891006799872-n-3-e1531251031159.jpg" alt="">
+        <div class="pad">
+          <div class="meta">09.05.2018</div>
+          <div class="title">Co dělat v máji? Mějte se rádi!</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    <article class="card" data-post-card data-title="Apalucha 2.0 aneb expedice bez tatínků" data-date="23.04.2018">
+      <a href="/zivotbavi/posts/apalucha-2-0/">
+        <img src="/zivotbavi/img-20180413-145647-resized-20180423-104319312-e1531251078330.jpg" alt="">
+        <div class="pad">
+          <div class="meta">23.04.2018</div>
+          <div class="title">Apalucha 2.0 aneb expedice bez tatínků</div>
+          <div class="meta">...</div>
+        </div>
+      </a>
+    </article>
+    
+    </div>
+  </section>
+
+  <footer>
+    <div class="inner container">© 2025 Život baví • Postaveno pro GitHub Pages</div>
+  </footer>
+  <script src="/zivotbavi/script.js" defer></script>
+</body>
+</html>
