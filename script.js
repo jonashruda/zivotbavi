@@ -1,0 +1,7 @@
+
+const root=document.documentElement;const saved=localStorage.getItem('zb-theme');if(saved){root.setAttribute('data-theme',saved)}function toggle(){const n=root.getAttribute('data-theme')==='light'?'dark':'light';root.setAttribute('data-theme',n);localStorage.setItem('zb-theme',n)}
+function cleanupDiviShortcodesIn(el){if(!el)return;let h=el.innerHTML;const R=[/\[\/?et_pb_(?:section|row|column(?:_inner)?|column_[^\]]*)[^\]]*\]/gi,/\[\/?vc_(?:section|row|column(?:_inner)?)\b[^\]]*\]/gi,/\[\/?et_pb_image[^\]]*\]/gi,/\[\/?et_pb_divider[^\]]*\]/gi];R.forEach(rx=>h=h.replace(rx,''));h=h.replace(/\[et_pb_text[^\]]*\]/gi,'');h=h.replace(/\[\/et_pb_text\]/gi,'');h=h.replace(/\[(?:\/)?[a-z_]+(?:[^\]]*)\]/gi,'');el.innerHTML=h}
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.content').forEach(cleanupDiviShortcodesIn)});
+// image fallback
+document.addEventListener('error',function(e){const t=e.target;if(t.tagName==='IMG'){t.outerHTML='<div class="ph" style="width:100%;height:'+ (t.height||220) +'px;border-radius:12px;border:1px solid #ffffff22;background:linear-gradient(135deg, rgba(255,193,7,.18), rgba(255,138,0,.18))"></div>'}},true);
+function filterPosts(){const q=(document.getElementById('q').value||'').toLowerCase().trim();document.querySelectorAll('[data-post-card]').forEach(c=>{const hay=(c.getAttribute('data-title')+' '+c.getAttribute('data-date')).toLowerCase();c.style.display=hay.includes(q)?'':''})}
